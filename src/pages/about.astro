@@ -1,63 +1,560 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About — Fadzyll" description="Get to know Fadzil Bin Ismail — Sabahan developer, INTJ, gamer, anime fan, and community builder." />
+	</head>
+	<body>
+		<Header />
+		<main>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<!-- Hero -->
+			<section class="about-hero">
+				<div class="about-hero-content">
+					<p class="section-label reveal">// about me</p>
+					<h1 class="reveal reveal-delay-1">The person behind <span class="accent">the code</span></h1>
+					<p class="lead reveal reveal-delay-2">
+						I'm Fadzil — a final year Software Engineering student from Tuaran, Sabah.
+						I build things with purpose, stay curious, and try to make a positive impact wherever I go.
+					</p>
+				</div>
+				<div class="avatar-block reveal-right">
+					<div class="avatar-wrapper">
+						<img src={profilePhoto.src} alt="Fadzil Bin Ismail" class="avatar-photo" />
+						<div class="avatar-ring"></div>
+					</div>
+								</div>
+			</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<!-- Who I am -->
+			<section class="section reveal">
+				<p class="section-label">// who i am</p>
+				<h2>A bit about me</h2>
+				<div class="two-col">
+					<div>
+						<p>
+							Born and raised in Tuaran, Sabah — I'm a Sabahan through and through. I'm currently finishing my
+							Bachelor of Computer Science (Software Engineering) at Universiti Malaysia Sabah, while doing my
+							internship at <a href="https://www.stadvisory.com/" target="_blank" rel="noopener noreferrer">ST Advisory</a> in Kota Kinabalu,
+							where I work on real-world software projects daily.
+						</p>
+						<p>
+							I identify as an <strong>INTJ</strong> (<span class="mbti-inline"><span class="mbti-letter">I</span><span class="mbti-word">ntroverted</span> · <span class="mbti-letter">N</span><span class="mbti-word">tuitive</span> · <span class="mbti-letter">T</span><span class="mbti-word">hinking</span> · <span class="mbti-letter">J</span><span class="mbti-word">udging</span></span>) — strategic, independent, and always thinking a few steps ahead.
+							I care deeply about the people around me — my family, my friends, and my studies are the things
+							that matter most to me.
+						</p>
+					</div>
+					<div>
+						<p>
+							Outside of tech, I'm a gamer, an anime fan, a history nerd, and someone who genuinely enjoys
+							community work — whether as a participant or an organizer. I believe technology should serve people,
+							not the other way around.
+						</p>
+						<p>
+							My love language? Giving gifts to the people I care about. And yes, I also have a cat.
+						</p>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<!-- My Story timeline -->
+			<section class="section">
+				<p class="section-label reveal">// my journey</p>
+				<h2 class="reveal reveal-delay-1">My Story</h2>
+				<div class="timeline">
+					<div class="timeline-item reveal reveal-delay-1">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2016 – 2020</span>
+							<h3>SM St John, Tuaran</h3>
+							<p>Completed SPM in Science Stream. Achieved 5A 2B. This is where it all started — curious, driven, and figuring out who I wanted to be.</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal reveal-delay-2">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2021 – 2022</span>
+							<h3>Labuan Matriculation College</h3>
+							<p>Module III — Science Major (Computer Science). CGPA 3.46, MUET Band 4.5. President of Sahabat Al-Irfaan committee. My first real taste of leadership.</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal reveal-delay-3">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2022 – Present</span>
+							<h3>Universiti Malaysia Sabah</h3>
+							<p>Bachelor of Computer Science with Honours (Software Engineering). CGPA 3.51 — Dean's List for 4 semesters. Active in KOR SUKSIS, PMFKI, and many faculty programs. Graduating December 2026.</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal reveal-delay-4">
+						<div class="timeline-dot timeline-dot-active"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2026 · Now</span>
+							<h3>ST Advisory — Internship</h3>
+							<p>Working at a boutique consulting firm in Kota Kinabalu on real software projects. Picking up Ruby on Rails, Ionic Angular, Quasar Vue, Docker and more. Growing every day.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<!-- Hobbies -->
+			<section class="section">
+				<p class="section-label reveal">// beyond the screen</p>
+				<h2 class="reveal reveal-delay-1">What I do for fun</h2>
+				<div class="hobbies-grid">
+					<div class="hobby-card reveal reveal-delay-1">
+						<span class="hobby-icon">🎮</span>
+						<h3>Gaming</h3>
+						<p>Mobile Legend, Call of Dragons, Hogwarts Legacy, Need for Speed, Tekken 8, eFootball — PC, PS5, or mobile, I'm in.</p>
+					</div>
+					<div class="hobby-card reveal reveal-delay-2">
+						<span class="hobby-icon">⛩️</span>
+						<h3>Anime</h3>
+						<p>One Piece, Your Lie in April, Violet Evergarden and many more. A good story hits different.</p>
+					</div>
+					<div class="hobby-card reveal reveal-delay-3">
+						<span class="hobby-icon">📜</span>
+						<h3>History</h3>
+						<p>Watching and reading documentaries about ancient civilizations. Understanding the past to make sense of the present.</p>
+					</div>
+					<div class="hobby-card reveal reveal-delay-4">
+						<span class="hobby-icon">📸</span>
+						<h3>Photography</h3>
+						<p>Chasing sunsets, cozy cafes, and beautiful places. Love capturing moments that feel right.</p>
+					</div>
+					<div class="hobby-card reveal reveal-delay-5">
+						<span class="hobby-icon">🍳</span>
+						<h3>Cooking</h3>
+						<p>Still learning, but I enjoy experimenting in the kitchen. Good food is part of good living.</p>
+					</div>
+					<div class="hobby-card reveal reveal-delay-6">
+						<span class="hobby-icon">🐱</span>
+						<h3>My Cat</h3>
+						<p>Playing with my cat is an underrated form of therapy. No further explanation needed.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- What drives me -->
+			<section class="section">
+				<p class="section-label reveal">// what drives me</p>
+				<h2 class="reveal reveal-delay-1">Values & motivation</h2>
+				<div class="values-grid">
+					<div class="value-card reveal reveal-delay-1">
+						<span class="value-icon">👨‍👩‍👦</span>
+						<h3>Family & Friends</h3>
+						<p>The people I care about are my biggest motivation. Everything I do, I do with them in mind.</p>
+					</div>
+					<div class="value-card reveal reveal-delay-2">
+						<span class="value-icon">🤝</span>
+						<h3>Community</h3>
+						<p>I genuinely enjoy joining programmes — as a participant or organizer. Volunteering isn't just something I do, it's something I believe in.</p>
+					</div>
+					<div class="value-card reveal reveal-delay-3">
+						<span class="value-icon">📈</span>
+						<h3>Growth</h3>
+						<p>Motivated to learn new skills and create impact. I'm always looking for the next thing to level up — whether in tech, leadership, or life.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Motto -->
+			<section class="section motto-section reveal">
+				<p class="section-label">// motto</p>
+				<blockquote class="motto">
+					<span class="motto-placeholder">Coming soon — a quote to live by.</span>
+				</blockquote>
+			</section>
+
+			<!-- Blog -->
+			<section class="section">
+				<p class="section-label reveal">// my diary</p>
+				<h2 class="reveal reveal-delay-1">Blog</h2>
+				<div class="blog-coming-soon reveal reveal-delay-2">
+					<span class="coming-icon">✍️</span>
+					<h3>Coming Soon</h3>
+					<p>I'll be posting random thoughts, experiences, lessons learned, and things I find interesting. Check back soon.</p>
+				</div>
+			</section>
+
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 900px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 4em 1em;
+	}
+
+	.section {
+		margin-bottom: 5em;
+	}
+
+	.section h2 {
+		font-size: 1.8em;
+		margin-bottom: 1.25em;
+	}
+
+	/* Hero */
+	.about-hero {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3em;
+		margin-bottom: 5em;
+		padding-bottom: 3em;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.about-hero-content {
+		flex: 1;
+	}
+
+	.about-hero-content h1 {
+		font-size: 2.8em;
+		line-height: 1.15;
+		margin: 0.25em 0 0.5em;
+	}
+
+	.lead {
+		font-size: 1.1em;
+		color: var(--white-muted);
+		line-height: 1.8;
+		margin: 0;
+	}
+
+	.avatar-block {
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.avatar-wrapper {
+		position: relative;
+		width: 180px;
+		height: 180px;
+	}
+
+	.avatar-photo {
+		width: 164px;
+		height: 164px;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: center 70%;
+		border: 2px solid var(--border);
+		position: relative;
+		z-index: 1;
+		margin: 8px;
+		display: block;
+	}
+
+	.avatar-ring {
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		border: 2px solid var(--accent);
+		opacity: 0.3;
+		animation: pulse-ring 3s ease-in-out infinite;
+	}
+
+	@keyframes pulse-ring {
+		0%, 100% { transform: scale(1); opacity: 0.3; }
+		50% { transform: scale(1.05); opacity: 0.1; }
+	}
+
+	.mbti-inline {
+		font-family: var(--font-mono);
+		font-size: 0.88em;
+	}
+
+	.mbti-letter {
+		color: var(--accent);
+		font-weight: 700;
+	}
+
+	.mbti-word {
+		color: var(--white-muted);
+	}
+
+	/* Two col */
+	.two-col {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+	}
+
+	.two-col p {
+		font-size: 0.95em;
+		line-height: 1.8;
+	}
+
+	/* Timeline */
+	.timeline {
+		position: relative;
+		padding-left: 2em;
+	}
+
+	.timeline::before {
+		content: '';
+		position: absolute;
+		left: 7px;
+		top: 8px;
+		bottom: 0;
+		width: 2px;
+		background: var(--border);
+	}
+
+	.timeline-item {
+		position: relative;
+		margin-bottom: 2.5em;
+	}
+
+	.timeline-dot {
+		position: absolute;
+		left: -1.85em;
+		top: 6px;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: var(--bg-card);
+		border: 2px solid var(--accent);
+	}
+
+	.timeline-dot-active {
+		background: var(--accent);
+		box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+	}
+
+	.timeline-year {
+		font-family: var(--font-mono);
+		font-size: 0.75em;
+		color: var(--accent);
+		letter-spacing: 0.05em;
+	}
+
+	.timeline-content h3 {
+		font-size: 1.1em;
+		margin: 0.25em 0 0.4em;
+		color: var(--white);
+	}
+
+	.timeline-content p {
+		font-size: 0.9em;
+		color: var(--white-muted);
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	/* Hobbies */
+	.hobbies-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+	}
+
+	.hobby-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.25em;
+		transition: border-color 0.2s ease, transform 0.2s ease;
+	}
+
+	.hobby-card:hover {
+		border-color: var(--border-hover);
+		transform: translateY(-2px);
+	}
+
+	.hobby-icon {
+		font-size: 1.8em;
+		display: block;
+		margin-bottom: 0.5em;
+	}
+
+	.hobby-card h3 {
+		font-size: 1em;
+		margin: 0 0 0.4em;
+	}
+
+	.hobby-card p {
+		font-size: 0.85em;
+		color: var(--white-muted);
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	/* Values */
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+	}
+
+	.value-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.5em;
+		text-align: center;
+	}
+
+	.value-icon {
+		font-size: 2em;
+		display: block;
+		margin-bottom: 0.5em;
+	}
+
+	.value-card h3 {
+		font-size: 1em;
+		margin: 0 0 0.5em;
+	}
+
+	.value-card p {
+		font-size: 0.85em;
+		color: var(--white-muted);
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	/* Motto */
+	.motto-section {
+		text-align: center;
+	}
+
+	.motto {
+		border: 1px dashed var(--border-hover);
+		border-radius: 12px;
+		padding: 2em;
+		margin: 0;
+		background: var(--accent-glow);
+	}
+
+	.motto-placeholder {
+		font-size: 1.1em;
+		color: var(--white-muted);
+		font-style: italic;
+		opacity: 0.6;
+	}
+
+	/* Blog coming soon */
+	.blog-coming-soon {
+		background: var(--bg-card);
+		border: 1px dashed var(--border-hover);
+		border-radius: 12px;
+		padding: 3em;
+		text-align: center;
+	}
+
+	.coming-icon {
+		font-size: 2.5em;
+		display: block;
+		margin-bottom: 0.5em;
+	}
+
+	.blog-coming-soon h3 {
+		font-size: 1.2em;
+		margin: 0 0 0.5em;
+		color: var(--white);
+	}
+
+	.blog-coming-soon p {
+		font-size: 0.9em;
+		color: var(--white-muted);
+		margin: 0;
+		max-width: 400px;
+		margin: 0 auto;
+		line-height: 1.7;
+	}
+
+	/* Scroll animations */
+	.reveal {
+		opacity: 0;
+		transform: translateY(28px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+	}
+
+	.reveal.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.reveal-right {
+		opacity: 0;
+		transform: translateX(32px);
+		transition: opacity 0.7s ease, transform 0.7s ease;
+	}
+
+	.reveal-right.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.reveal-delay-1 { transition-delay: 0.1s; }
+	.reveal-delay-2 { transition-delay: 0.2s; }
+	.reveal-delay-3 { transition-delay: 0.3s; }
+	.reveal-delay-4 { transition-delay: 0.4s; }
+	.reveal-delay-5 { transition-delay: 0.5s; }
+	.reveal-delay-6 { transition-delay: 0.6s; }
+
+	@media (max-width: 720px) {
+		.about-hero {
+			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
+		}
+
+		.about-hero-content h1 {
+			font-size: 2em;
+		}
+
+		.two-col {
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+
+		.hobbies-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hobbies-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				} else {
+					entry.target.classList.remove('visible');
+				}
+			});
+		},
+		{ threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+	);
+
+	document.querySelectorAll('.reveal, .reveal-right').forEach((el) => {
+		observer.observe(el);
+	});
+</script>

@@ -1,0 +1,346 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Contact — Fadzyll" description="Get in touch with Fadzil Bin Ismail — open to opportunities, collaborations, and conversations." />
+	</head>
+	<body>
+		<Header />
+		<main>
+
+			<!-- Hero -->
+			<section class="page-hero">
+				<p class="section-label reveal">// contact</p>
+				<h1 class="reveal reveal-delay-1">Let's <span class="accent">connect</span></h1>
+				<p class="lead reveal reveal-delay-2">
+					Whether you have an opportunity, a project idea, or just want to say hi —
+					my inbox is always open. I'll get back to you as soon as I can.
+				</p>
+			</section>
+
+			<!-- Contact cards -->
+			<section class="section">
+				<div class="contact-grid">
+
+					<a href="mailto:Fadzzf8@gmail.com" class="contact-card reveal reveal-delay-1">
+						<div class="contact-icon-wrap">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" aria-hidden="true">
+								<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="contact-info">
+							<p class="contact-label">Email</p>
+							<p class="contact-value">Fadzzf8@gmail.com</p>
+							<p class="contact-hint">Best way to reach me</p>
+						</div>
+						<span class="contact-arrow">→</span>
+					</a>
+
+					<a href="https://www.linkedin.com/in/fadzilismail/" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-2">
+						<div class="contact-icon-wrap">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" aria-hidden="true">
+								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+							</svg>
+						</div>
+						<div class="contact-info">
+							<p class="contact-label">LinkedIn</p>
+							<p class="contact-value">Fadzil Bin Ismail</p>
+							<p class="contact-hint">Connect professionally</p>
+						</div>
+						<span class="contact-arrow">→</span>
+					</a>
+
+					<a href="https://github.com/Fadzyll" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-3">
+						<div class="contact-icon-wrap">
+							<svg viewBox="0 0 16 16" width="28" height="28" aria-hidden="true">
+								<path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+							</svg>
+						</div>
+						<div class="contact-info">
+							<p class="contact-label">GitHub</p>
+							<p class="contact-value">github.com/Fadzyll</p>
+							<p class="contact-hint">See my code & projects</p>
+						</div>
+						<span class="contact-arrow">→</span>
+					</a>
+
+				</div>
+			</section>
+
+			<!-- Availability -->
+			<section class="section">
+				<div class="availability reveal reveal-delay-1">
+					<div class="avail-dot"></div>
+					<div>
+						<h3>Currently available for</h3>
+						<div class="avail-tags">
+							<span class="tag">Industrial Training</span>
+							<span class="tag">Freelance Projects</span>
+							<span class="tag">Open Source Collaboration</span>
+							<span class="tag">Networking</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Location -->
+			<section class="section location-section reveal reveal-delay-1">
+				<div class="location-card">
+					<span class="location-icon">📍</span>
+					<div>
+						<p class="location-label">Based in</p>
+						<h3>Tuaran, Sabah, Malaysia</h3>
+						<p class="location-sub">Currently in Kota Kinabalu for internship · Open to remote & relocation</p>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 900px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 4em 1em;
+	}
+
+	.section {
+		margin-bottom: 4em;
+	}
+
+	/* Hero */
+	.page-hero {
+		margin-bottom: 4em;
+		padding-bottom: 3em;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.page-hero h1 {
+		font-size: 2.8em;
+		margin: 0.25em 0 0.5em;
+	}
+
+	.lead {
+		font-size: 1.05em;
+		color: var(--white-muted);
+		line-height: 1.8;
+		margin: 0;
+		max-width: 560px;
+	}
+
+	/* Contact cards */
+	.contact-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.contact-card {
+		display: flex;
+		align-items: center;
+		gap: 1.5em;
+		padding: 1.5em;
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+	}
+
+	.contact-card:hover {
+		border-color: var(--border-hover);
+		transform: translateY(-2px);
+		box-shadow: var(--box-shadow-hover);
+		color: inherit;
+	}
+
+	.contact-icon-wrap {
+		width: 56px;
+		height: 56px;
+		background: var(--accent-glow);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--accent);
+		flex-shrink: 0;
+		transition: background 0.2s;
+	}
+
+	.contact-card:hover .contact-icon-wrap {
+		background: rgba(56, 189, 248, 0.2);
+	}
+
+	.contact-info {
+		flex: 1;
+	}
+
+	.contact-label {
+		font-family: var(--font-mono);
+		font-size: 0.75em;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0 0 0.2em;
+	}
+
+	.contact-value {
+		font-size: 1em;
+		font-weight: 600;
+		color: var(--white);
+		margin: 0 0 0.2em;
+	}
+
+	.contact-hint {
+		font-size: 0.82em;
+		color: var(--white-muted);
+		margin: 0;
+	}
+
+	.contact-arrow {
+		color: var(--accent);
+		font-size: 1.2em;
+		opacity: 0;
+		transition: opacity 0.2s, transform 0.2s;
+		flex-shrink: 0;
+	}
+
+	.contact-card:hover .contact-arrow {
+		opacity: 1;
+		transform: translateX(4px);
+	}
+
+	/* Availability */
+	.availability {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		padding: 1.5em 2em;
+		display: flex;
+		align-items: flex-start;
+		gap: 1.25em;
+	}
+
+	.avail-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #4ade80;
+		box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+		flex-shrink: 0;
+		margin-top: 6px;
+		animation: pulse-dot 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse-dot {
+		0%, 100% { box-shadow: 0 0 8px rgba(74, 222, 128, 0.6); }
+		50% { box-shadow: 0 0 16px rgba(74, 222, 128, 0.9); }
+	}
+
+	.availability h3 {
+		font-size: 1em;
+		margin: 0 0 0.75em;
+		color: var(--white);
+	}
+
+	.avail-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	/* Location */
+	.location-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		padding: 1.5em 2em;
+		display: flex;
+		align-items: center;
+		gap: 1.25em;
+	}
+
+	.location-icon {
+		font-size: 2em;
+		flex-shrink: 0;
+	}
+
+	.location-label {
+		font-family: var(--font-mono);
+		font-size: 0.75em;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0 0 0.2em;
+	}
+
+	.location-card h3 {
+		font-size: 1.05em;
+		margin: 0 0 0.25em;
+		color: var(--white);
+	}
+
+	.location-sub {
+		font-size: 0.85em;
+		color: var(--white-muted);
+		margin: 0;
+	}
+
+	/* Scroll animations */
+	.reveal {
+		opacity: 0;
+		transform: translateY(28px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+	}
+
+	.reveal.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.reveal-delay-1 { transition-delay: 0.1s; }
+	.reveal-delay-2 { transition-delay: 0.2s; }
+	.reveal-delay-3 { transition-delay: 0.3s; }
+
+	@media (max-width: 720px) {
+		.page-hero h1 {
+			font-size: 2em;
+		}
+
+		.contact-card {
+			gap: 1em;
+		}
+	}
+</style>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				} else {
+					entry.target.classList.remove('visible');
+				}
+			});
+		},
+		{ threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+	);
+
+	document.querySelectorAll('.reveal').forEach((el) => {
+		observer.observe(el);
+	});
+</script>

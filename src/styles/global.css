@@ -1,40 +1,54 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--accent: #38bdf8;
+	--accent-dark: #0ea5e9;
+	--accent-glow: rgba(56, 189, 248, 0.15);
+	--bg-primary: #050a14;
+	--bg-secondary: #0a1628;
+	--bg-card: #0d1f3c;
+	--bg-card-hover: #112347;
+	--navy: #0f2044;
+	--navy-light: #1a3260;
+	--white: #f0f6ff;
+	--white-muted: #a8b8d0;
+	--border: rgba(56, 189, 248, 0.15);
+	--border-hover: rgba(56, 189, 248, 0.4);
+	--box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+	--box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-hover);
+	--font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	font-family: var(--font-atkinson);
+	font-family: var(--font-atkinson), system-ui, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-color: var(--bg-primary);
+	background-image:
+		radial-gradient(ellipse at 20% 10%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
+		radial-gradient(ellipse at 80% 80%, rgba(15, 32, 68, 0.8) 0%, transparent 50%);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	color: var(--white);
+	font-size: 18px;
 	line-height: 1.7;
+	min-height: 100vh;
 }
+
 main {
-	width: 720px;
+	width: 900px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
+
 h1,
 h2,
 h3,
@@ -42,84 +56,224 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: var(--white);
 	line-height: 1.2;
+	font-weight: 700;
 }
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
+
+h1 { font-size: 3.052em; }
+h2 { font-size: 2.441em; }
+h3 { font-size: 1.953em; }
+h4 { font-size: 1.563em; }
+h5 { font-size: 1.25em; }
+
 strong,
 b {
 	font-weight: 700;
+	color: var(--white);
 }
+
 a {
 	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease;
 }
+
 a:hover {
-	color: var(--accent);
+	color: var(--accent-dark);
 }
+
 p {
 	margin-bottom: 1em;
+	color: var(--white-muted);
 }
+
 .prose p {
 	margin-bottom: 2em;
 }
+
 textarea {
 	width: 100%;
 	font-size: 16px;
+	background: var(--bg-card);
+	color: var(--white);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 0.75em;
 }
+
 input {
 	font-size: 16px;
+	background: var(--bg-card);
+	color: var(--white);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 0.5em 0.75em;
 }
+
 table {
 	width: 100%;
+	border-collapse: collapse;
 }
+
+th {
+	color: var(--accent);
+	border-bottom: 1px solid var(--border);
+	padding: 0.5em 1em;
+	text-align: left;
+}
+
+td {
+	padding: 0.5em 1em;
+	border-bottom: 1px solid rgba(56, 189, 248, 0.05);
+	color: var(--white-muted);
+}
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
+
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	font-family: var(--font-mono);
+	padding: 2px 8px;
+	background-color: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	font-size: 0.9em;
+	color: var(--accent);
 }
+
 pre {
 	padding: 1.5em;
-	border-radius: 8px;
+	border-radius: 12px;
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	overflow-x: auto;
 }
+
 pre > code {
 	all: unset;
+	font-family: var(--font-mono);
+	color: var(--white);
 }
+
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
+	border-left: 3px solid var(--accent);
+	padding: 0.5em 0 0.5em 1.5em;
+	margin: 1.5em 0;
+	background: var(--accent-glow);
+	border-radius: 0 8px 8px 0;
+	font-size: 1.1em;
+	color: var(--white-muted);
 }
+
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--border);
+	margin: 2em 0;
 }
+
+/* Utility classes */
+.accent { color: var(--accent); }
+.muted { color: var(--white-muted); }
+
+.tag {
+	display: inline-block;
+	font-family: var(--font-mono);
+	font-size: 0.75em;
+	padding: 0.25em 0.75em;
+	background: var(--accent-glow);
+	border: 1px solid var(--border);
+	border-radius: 100px;
+	color: var(--accent);
+}
+
+.card {
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 1.5em;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+	border-color: var(--border-hover);
+	box-shadow: var(--box-shadow-hover);
+	transform: translateY(-2px);
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.6em 1.4em;
+	border-radius: 8px;
+	font-size: 0.95em;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-decoration: none;
+	border: none;
+}
+
+.btn-primary {
+	background: var(--accent);
+	color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+	background: var(--accent-dark);
+	color: var(--bg-primary);
+	box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--accent);
+	border: 1px solid var(--border-hover);
+}
+
+.btn-outline:hover {
+	background: var(--accent-glow);
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+.section-label {
+	font-family: var(--font-mono);
+	font-size: 0.8em;
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+}
+
+@media (max-width: 900px) {
+	.hero-content p {
+		text-align: center;
+	}
+	.avatar-wrapper {
+		width: 180px !important;
+		height: 180px !important;
+	}
+	.avatar-photo {
+		width: 164px !important;
+		height: 164px !important;
+		margin: 8px !important;
+	}
+}
+
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
-		padding: 1em;
+		padding: 1.5em 1em;
 	}
+	h1 { font-size: 2.2em; }
+	h2 { font-size: 1.8em; }
 }
 
 .sr-only {
@@ -130,12 +284,8 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
