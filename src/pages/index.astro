@@ -56,12 +56,12 @@ import profilePhoto from '../assets/GMBR.jpg';
 
 			<section class="stats-row">
 				<div class="stat-card reveal reveal-delay-1">
-					<span class="stat-number accent">∞</span>
-					<span class="stat-label">Curiosity</span>
+					<span class="stat-number accent">3.52</span>
+					<span class="stat-label">Current CGPA</span>
 				</div>
 				<div class="stat-card reveal reveal-delay-2">
-					<span class="stat-number accent">100%</span>
-					<span class="stat-label">Purpose-driven</span>
+					<span class="stat-number accent">5×</span>
+					<span class="stat-label">Dean's List</span>
 				</div>
 				<div class="stat-card reveal reveal-delay-3">
 					<span class="stat-number accent">Sabah</span>
@@ -267,7 +267,8 @@ import profilePhoto from '../assets/GMBR.jpg';
 					<div class="project-card reveal reveal-delay-2">
 						<div class="project-header">
 							<span class="project-icon">🌐</span>
-							<span class="project-status">FYP · In Progress</span>
+							<span class="project-status">FYP · Completed</span>
+							<span class="project-private-badge">🔒 Private</span>
 						</div>
 						<h3>eKAFA PIUMS</h3>
 						<p>A web-based school management system to digitize and streamline KAFA workload management — replacing traditional paper-based processes.</p>
@@ -503,7 +504,7 @@ import profilePhoto from '../assets/GMBR.jpg';
 
 	.links-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1em;
 	}
 
@@ -608,7 +609,7 @@ import profilePhoto from '../assets/GMBR.jpg';
 		}
 
 		.links-grid {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: 1fr;
 		}
 	}
 
@@ -804,6 +805,17 @@ import profilePhoto from '../assets/GMBR.jpg';
 		border: 1px solid var(--border);
 		padding: 0.2em 0.6em;
 		border-radius: 100px;
+	}
+
+	.project-private-badge {
+		font-family: var(--font-mono);
+		font-size: 0.72em;
+		color: var(--white-muted);
+		background: rgba(168, 184, 208, 0.08);
+		border: 1px solid rgba(168, 184, 208, 0.2);
+		padding: 0.2em 0.6em;
+		border-radius: 100px;
+		margin-left: auto;
 	}
 
 	.project-card h3 {

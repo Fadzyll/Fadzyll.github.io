@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ekafaImg from '../assets/Screenshot 2026-05-24 205448.png';
+import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 ---
 
 <!doctype html>
@@ -28,18 +30,16 @@ import Footer from '../components/Footer.astro';
 
 					<div class="project-card reveal reveal-delay-1">
 						<div class="project-image">
-							<div class="project-image-placeholder">
-								<span>🌐</span>
-								<p>Screenshot coming soon</p>
-							</div>
+							<img src={ekafaImg.src} alt="eKAFA PIUMS screenshot" class="project-screenshot" />
 						</div>
 						<div class="project-info">
 							<div class="project-meta">
 								<span class="project-badge">Final Year Project</span>
-								<span class="project-status active">● In Progress</span>
+								<span class="project-status done">✓ Completed</span>
+								<span class="project-private">🔒 Private Repo</span>
 							</div>
 							<h3>eKAFA PIUMS</h3>
-							<p class="project-date">Feb 2025 — Present</p>
+							<p class="project-date">Feb 2025 — February 2026</p>
 							<p class="project-desc">A web-based school management system built to replace traditional paper-based processes for managing KAFA workload. The system digitizes day-to-day operations, making it easier for administrators and teachers to manage tasks efficiently.</p>
 							<div class="project-highlights">
 								<span class="highlight-item">📋 Digitizes KAFA workload management</span>
@@ -60,10 +60,7 @@ import Footer from '../components/Footer.astro';
 
 					<div class="project-card reveal reveal-delay-2">
 						<div class="project-image">
-							<div class="project-image-placeholder">
-								<span>📱</span>
-								<p>Screenshot coming soon</p>
-							</div>
+							<img src={kindergartenImg.src} alt="Kindergarten App screenshot" class="project-screenshot project-screenshot-mobile" />
 						</div>
 						<div class="project-info">
 							<div class="project-meta">
@@ -314,28 +311,34 @@ import Footer from '../components/Footer.astro';
 
 	.project-image {
 		background: var(--bg-secondary);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 220px;
+		overflow: hidden;
+		position: relative;
+		align-self: stretch;
 	}
 
-	.project-image-placeholder {
-		text-align: center;
-		padding: 2em;
-	}
-
-	.project-image-placeholder span {
-		font-size: 3em;
+	.project-screenshot {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		border-radius: 0;
 		display: block;
-		margin-bottom: 0.5em;
+		position: absolute;
+		inset: 0;
+		transition: transform 0.4s ease;
 	}
 
-	.project-image-placeholder p {
-		font-size: 0.8em;
-		color: var(--white-muted);
-		margin: 0;
-		opacity: 0.5;
+	.project-screenshot-mobile {
+		object-fit: cover;
+		object-position: center 45%;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		inset: 0;
+	}
+
+	.project-image:hover .project-screenshot {
+		transform: scale(1.03);
 	}
 
 	.project-info {
@@ -348,7 +351,8 @@ import Footer from '../components/Footer.astro';
 	.project-meta {
 		display: flex;
 		align-items: center;
-		gap: 0.75em;
+		flex-wrap: wrap;
+		gap: 0.5em;
 	}
 
 	.project-badge {
@@ -378,6 +382,16 @@ import Footer from '../components/Footer.astro';
 		color: var(--white-muted);
 		background: rgba(168, 184, 208, 0.1);
 		border: 1px solid rgba(168, 184, 208, 0.2);
+	}
+
+	.project-private {
+		font-family: var(--font-mono);
+		font-size: 0.72em;
+		color: var(--white-muted);
+		background: rgba(168, 184, 208, 0.08);
+		border: 1px solid rgba(168, 184, 208, 0.2);
+		padding: 0.2em 0.6em;
+		border-radius: 100px;
 	}
 
 	.project-info h3 {
@@ -588,7 +602,7 @@ import Footer from '../components/Footer.astro';
 		}
 
 		.project-image {
-			min-height: 160px;
+			height: 220px;
 		}
 
 		.page-hero h1 {

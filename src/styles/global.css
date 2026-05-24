@@ -17,6 +17,33 @@
 	--font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 
+html.light {
+	--accent: #0284c7;
+	--accent-dark: #0369a1;
+	--accent-glow: rgba(2, 132, 199, 0.1);
+	--bg-primary: #f0f6ff;
+	--bg-secondary: #e2ecf8;
+	--bg-card: #ffffff;
+	--bg-card-hover: #f0f6ff;
+	--white: #0f1c2e;
+	--white-muted: #4a6080;
+	--border: rgba(2, 132, 199, 0.2);
+	--border-hover: rgba(2, 132, 199, 0.5);
+	--box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--border);
+	--box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-hover);
+}
+
+html.light body {
+	background-image:
+		radial-gradient(ellipse at 20% 10%, rgba(2, 132, 199, 0.06) 0%, transparent 50%),
+		radial-gradient(ellipse at 80% 80%, rgba(224, 238, 255, 0.8) 0%, transparent 50%);
+}
+
+html.light header {
+	background: rgba(240, 246, 255, 0.9) !important;
+	border-bottom-color: rgba(2, 132, 199, 0.2) !important;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -251,8 +278,10 @@ hr {
 }
 
 @media (max-width: 900px) {
-	.hero-content p {
-		text-align: center;
+	.hero-content p,
+	.hero-content .bio,
+	.hero-content .tagline {
+		text-align: center !important;
 	}
 	.avatar-wrapper {
 		width: 180px !important;
@@ -274,6 +303,39 @@ hr {
 	}
 	h1 { font-size: 2.2em; }
 	h2 { font-size: 1.8em; }
+}
+
+/* Back to top button */
+.back-to-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: var(--accent);
+	color: var(--bg-primary);
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1em;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	z-index: 99;
+	box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+}
+
+.back-to-top.visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.back-to-top:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
 }
 
 .sr-only {

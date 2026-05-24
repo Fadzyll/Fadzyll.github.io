@@ -71,12 +71,28 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 					<div class="timeline-item reveal reveal-delay-1">
 						<div class="timeline-dot"></div>
 						<div class="timeline-content">
-							<span class="timeline-year">2016 – 2020</span>
-							<h3>SM St John, Tuaran</h3>
-							<p>Completed SPM in Science Stream. Achieved 5A 2B. This is where it all started — curious, driven, and figuring out who I wanted to be.</p>
+							<span class="timeline-year">2010 – 2011</span>
+							<h3>SK Tanjung Aru 1</h3>
+							<p>Started primary school here in Darjah 1. Transferred to SK Laya-Laya mid-way through Darjah 2.</p>
 						</div>
 					</div>
 					<div class="timeline-item reveal reveal-delay-2">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2011 – 2015</span>
+							<h3>SK Laya-Laya, Tuaran</h3>
+							<p>Completed primary school here after transferring in Darjah 2. Sat for UPSR and came out with 3A, 1B, 1C — an early sign that working hard pays off.</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal reveal-delay-3">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="timeline-year">2016 – 2020</span>
+							<h3>SM St John, Tuaran</h3>
+							<p>Secondary school in the Science Stream. PT3 results: 7A, 2B, 1C. Completed SPM with 5A 2B. This is where curiosity turned into drive — figuring out who I wanted to become.</p>
+						</div>
+					</div>
+					<div class="timeline-item reveal reveal-delay-4">
 						<div class="timeline-dot"></div>
 						<div class="timeline-content">
 							<span class="timeline-year">2021 – 2022</span>
@@ -84,15 +100,15 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 							<p>Module III — Science Major (Computer Science). CGPA 3.46, MUET Band 4.5. President of Sahabat Al-Irfaan committee. My first real taste of leadership.</p>
 						</div>
 					</div>
-					<div class="timeline-item reveal reveal-delay-3">
+					<div class="timeline-item reveal reveal-delay-5">
 						<div class="timeline-dot"></div>
 						<div class="timeline-content">
 							<span class="timeline-year">2022 – Present</span>
 							<h3>Universiti Malaysia Sabah</h3>
-							<p>Bachelor of Computer Science with Honours (Software Engineering). CGPA 3.51 — Dean's List for 4 semesters. Active in KOR SUKSIS, PMFKI, and many faculty programs. Graduating December 2026.</p>
+							<p>Bachelor of Computer Science with Honours (Software Engineering). CGPA 3.52 — Dean's List for 5 semesters. Active in KOR SUKSIS, PMFKI, and many faculty programs. Graduating December 2026.</p>
 						</div>
 					</div>
-					<div class="timeline-item reveal reveal-delay-4">
+					<div class="timeline-item reveal reveal-delay-5">
 						<div class="timeline-dot timeline-dot-active"></div>
 						<div class="timeline-content">
 							<span class="timeline-year">2026 · Now</span>
@@ -166,10 +182,22 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 
 			<!-- Motto -->
 			<section class="section motto-section reveal">
-				<p class="section-label">// motto</p>
-				<blockquote class="motto">
-					<span class="motto-placeholder">Coming soon — a quote to live by.</span>
-				</blockquote>
+				<p class="section-label">// quotes i live by</p>
+				<h2 class="reveal reveal-delay-1">Words that <span class="accent">guide me</span></h2>
+				<div class="quotes-grid">
+					<blockquote class="quote-card reveal reveal-delay-1">
+						<p class="quote-text">"The time you become truly a failure is when you stop trying to succeed in life."</p>
+						<footer class="quote-author">— Fadzil Bin Ismail</footer>
+					</blockquote>
+					<blockquote class="quote-card reveal reveal-delay-2">
+						<p class="quote-text">"Life is like riding a bicycle. To keep your balance, you must keep moving."</p>
+						<footer class="quote-author">— Albert Einstein</footer>
+					</blockquote>
+					<blockquote class="quote-card reveal reveal-delay-3">
+						<p class="quote-text">"Take advantage of five before five: your youth before your old age, your health before your sickness, your wealth before your poverty, your free time before you are preoccupied, and your life before your death."</p>
+						<footer class="quote-author">— Prophet Muhammad ﷺ</footer>
+					</blockquote>
+				</div>
 			</section>
 
 			<!-- Blog -->
@@ -369,6 +397,7 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 		border: 1px solid var(--border);
 		border-radius: 12px;
 		padding: 1.25em;
+		text-align: center;
 		transition: border-color 0.2s ease, transform 0.2s ease;
 	}
 
@@ -429,23 +458,46 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 	}
 
 	/* Motto */
-	.motto-section {
-		text-align: center;
+	.motto-section h2 {
+		font-size: 1.8em;
+		margin: 0.25em 0 1.25em;
 	}
 
-	.motto {
-		border: 1px dashed var(--border-hover);
+	.quotes-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.quote-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-left: 3px solid var(--accent);
 		border-radius: 12px;
-		padding: 2em;
+		padding: 1.5em 2em;
 		margin: 0;
-		background: var(--accent-glow);
+		transition: border-color 0.2s, transform 0.2s;
 	}
 
-	.motto-placeholder {
-		font-size: 1.1em;
-		color: var(--white-muted);
+	.quote-card:hover {
+		border-color: var(--border-hover);
+		border-left-color: var(--accent);
+		transform: translateX(4px);
+	}
+
+	.quote-text {
+		font-size: 1em;
+		color: var(--white);
 		font-style: italic;
-		opacity: 0.6;
+		line-height: 1.8;
+		margin: 0 0 0.75em;
+	}
+
+	.quote-author {
+		font-family: var(--font-mono);
+		font-size: 0.78em;
+		color: var(--accent);
+		letter-spacing: 0.05em;
 	}
 
 	/* Blog coming soon */

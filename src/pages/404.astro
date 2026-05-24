@@ -1,0 +1,96 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="404 — Page Not Found" description="This page doesn't exist." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="not-found">
+				<p class="section-label">// error 404</p>
+				<h1><span class="accent">Oops.</span></h1>
+				<p class="lead">This page doesn't exist — or maybe it moved.</p>
+				<p class="sub">You might have followed a broken link or typed the wrong URL.</p>
+				<div class="actions">
+					<a href="/" class="btn btn-primary">Back to Home</a>
+					<a href="/contact" class="btn btn-outline">Contact Me</a>
+				</div>
+				<p class="code">404</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 900px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 4em 1em;
+	}
+
+	.not-found {
+		min-height: calc(100vh - 200px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		position: relative;
+	}
+
+	.not-found h1 {
+		font-size: 4em;
+		margin: 0.15em 0 0.25em;
+	}
+
+	.lead {
+		font-size: 1.2em;
+		color: var(--white);
+		margin: 0 0 0.5em;
+	}
+
+	.sub {
+		font-size: 0.95em;
+		color: var(--white-muted);
+		margin: 0 0 2em;
+	}
+
+	.actions {
+		display: flex;
+		gap: 1em;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.code {
+		position: absolute;
+		font-size: 18em;
+		font-weight: 900;
+		font-family: var(--font-mono);
+		color: var(--accent);
+		opacity: 0.03;
+		user-select: none;
+		pointer-events: none;
+		margin: 0;
+		line-height: 1;
+		z-index: -1;
+	}
+
+	@media (max-width: 720px) {
+		.not-found h1 {
+			font-size: 2.8em;
+		}
+
+		.code {
+			font-size: 10em;
+		}
+	}
+</style>

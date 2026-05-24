@@ -2,6 +2,8 @@
 const today = new Date();
 ---
 
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
 <footer>
 	<div class="footer-inner">
 		<div class="footer-brand">
@@ -96,3 +98,19 @@ const today = new Date();
 		opacity: 0.6;
 	}
 </style>
+
+<script>
+	const btn = document.getElementById('backToTop');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 400) {
+			btn?.classList.add('visible');
+		} else {
+			btn?.classList.remove('visible');
+		}
+	});
+
+	btn?.addEventListener('click', () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+</script>
