@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ekafaImg from '../assets/Screenshot 2026-05-24 205448.png';
 import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
+import cgpaImg from '../assets/cgpa-calculator.png';
 ---
 
 <!doctype html>
@@ -81,6 +82,35 @@ import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 								<span class="tag">Room Database</span>
 								<span class="tag">MVVM</span>
 								<span class="tag">Material 3</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal reveal-delay-3">
+						<div class="project-image">
+							<img src={cgpaImg.src} alt="CGPA Calculator screenshot" class="project-screenshot project-screenshot-mobile" />
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="project-badge">Web App</span>
+								<span class="project-status done">✓ Completed</span>
+							</div>
+							<h3>CGPA Calculator</h3>
+							<p class="project-date">2025</p>
+							<p class="project-desc">A web-based CGPA calculator tailored for Malaysian public university students. Supports semester GPA calculation, cumulative CGPA tracking, target GPA planning, and a full grade reference — all based on the UMS grading policy.</p>
+							<div class="project-highlights">
+								<span class="highlight-item">🎓 Semester & cumulative CGPA</span>
+								<span class="highlight-item">🎯 Target GPA planner</span>
+								<span class="highlight-item">📊 UMS grading policy</span>
+							</div>
+							<div class="project-tags">
+								<span class="tag">Astro</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">TypeScript</span>
+								<span class="tag">CSS</span>
+							</div>
+							<div class="project-links">
+								<a href="https://cgpa-calculator-unimy.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">🌐 Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -341,6 +371,7 @@ import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 		transform: scale(1.03);
 	}
 
+
 	.project-info {
 		padding: 1.75em 1.75em 1.75em 0;
 		display: flex;
@@ -430,6 +461,17 @@ import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 		flex-wrap: wrap;
 		gap: 0.4em;
 		margin-top: 0.25em;
+	}
+
+	.project-links {
+		display: flex;
+		gap: 0.75em;
+		margin-top: 0.5em;
+	}
+
+	.project-links .btn {
+		font-size: 0.82em;
+		padding: 0.4em 1em;
 	}
 
 	/* Skills */
