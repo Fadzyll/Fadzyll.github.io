@@ -20,6 +20,26 @@ const { title, description } = Astro.props;
 	}
 </script>
 
+<!-- Page transition -->
+<style is:inline>
+	body { opacity: 0; transition: opacity 0.25s ease; }
+	body.loaded { opacity: 1; }
+</style>
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		document.body.classList.add('loaded');
+	});
+	document.querySelectorAll('a[href]').forEach((link) => {
+		const href = link.getAttribute('href');
+		if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.hasAttribute('download')) return;
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.body.style.opacity = '0';
+			setTimeout(() => { window.location.href = href; }, 200);
+		});
+	});
+</script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
