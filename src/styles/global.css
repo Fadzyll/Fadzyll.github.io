@@ -338,6 +338,17 @@ hr {
 	box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
 }
 
+/* Botpress widget */
+#bp-web-widget-container {
+	bottom: 5em !important;
+	right: 1.5em !important;
+}
+
+#bp-web-widget-container iframe {
+	width: 320px !important;
+	height: 420px !important;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;

@@ -118,6 +118,25 @@ import cgpaImg from '../assets/cgpa-calculator.png';
 				</div>
 			</section>
 
+			<!-- GitHub Stats -->
+			<section class="section">
+				<p class="section-label reveal">// open source</p>
+				<h2 class="reveal reveal-delay-1">GitHub Activity</h2>
+				<div class="github-stats reveal reveal-delay-2">
+					<a href="https://github.com/Fadzyll" target="_blank" rel="noopener noreferrer" class="github-stat-card">
+						<img src="https://github-readme-stats-7lvgufs55-fadzyll-s-projects.vercel.app/api?username=Fadzyll&show_icons=true&theme=transparent&hide_border=true&title_color=38bdf8&icon_color=38bdf8&text_color=a8b8d0&ring_color=38bdf8&count_private=true" alt="Fadzil's GitHub Stats" />
+					</a>
+					<a href="https://github.com/Fadzyll" target="_blank" rel="noopener noreferrer" class="github-stat-card">
+						<img src="https://github-readme-stats-7lvgufs55-fadzyll-s-projects.vercel.app/api/top-langs/?username=Fadzyll&layout=compact&theme=transparent&hide_border=true&title_color=38bdf8&text_color=a8b8d0&langs_count=8" alt="Fadzil's Top Languages" />
+					</a>
+				</div>
+				<div class="github-streak reveal reveal-delay-3">
+					<a href="https://github.com/Fadzyll" target="_blank" rel="noopener noreferrer">
+						<img src="https://streak-stats.demolab.com?user=Fadzyll&theme=transparent&hide_border=true&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideLabels=a8b8d0&dates=a8b8d0&currStreakNum=f0f6ff&sideNums=f0f6ff" alt="Fadzil's GitHub Streak" />
+					</a>
+				</div>
+			</section>
+
 			<!-- Skills -->
 			<section class="section">
 				<p class="section-label reveal">// skills</p>
@@ -472,6 +491,66 @@ import cgpaImg from '../assets/cgpa-calculator.png';
 	.project-links .btn {
 		font-size: 0.82em;
 		padding: 0.4em 1em;
+	}
+
+	/* GitHub Stats */
+	.github-stats {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em;
+		margin-bottom: 1em;
+	}
+
+	.github-stat-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: border-color 0.2s, transform 0.2s;
+		overflow: hidden;
+	}
+
+	.github-stat-card:hover {
+		border-color: var(--border-hover);
+		transform: translateY(-2px);
+	}
+
+	.github-stat-card img {
+		width: 100%;
+		height: auto;
+		border-radius: 0;
+	}
+
+	.github-streak {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: border-color 0.2s, transform 0.2s;
+	}
+
+	.github-streak:hover {
+		border-color: var(--border-hover);
+		transform: translateY(-2px);
+	}
+
+	.github-streak img {
+		width: 100%;
+		max-width: 600px;
+		height: auto;
+		border-radius: 0;
+	}
+
+	@media (max-width: 720px) {
+		.github-stats {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* Skills */
