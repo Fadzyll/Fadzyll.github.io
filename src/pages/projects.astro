@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import ekafaImg from '../assets/Screenshot 2026-05-24 205448.png';
 import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 import cgpaImg from '../assets/cgpa-calculator.png';
+import korSuksisImg from '../assets/kor-suksis.jpg';
 
 // GitHub stats — update these manually every few months
 const githubStats = {
@@ -84,11 +85,10 @@ const topLanguages = [
 							</div>
 							<h3>Kindergarten Management App</h3>
 							<p class="project-date">March 2025 — July 2025</p>
-							<p class="project-desc">A mobile application designed for kindergarten settings, allowing teachers to efficiently manage student data, attendance, class assignments, and payment records — all in one place.</p>
+							<p class="project-desc">A simple mobile application designed for kindergarten settings, allowing teachers to manage student data and attendance in one place.</p>
 							<div class="project-highlights">
 								<span class="highlight-item">👶 Student data management</span>
 								<span class="highlight-item">📅 Attendance tracking</span>
-								<span class="highlight-item">💳 Payment records</span>
 							</div>
 							<div class="project-tags">
 								<span class="tag">Kotlin</span>
@@ -96,6 +96,39 @@ const topLanguages = [
 								<span class="tag">Room Database</span>
 								<span class="tag">MVVM</span>
 								<span class="tag">Material 3</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal reveal-delay-3">
+						<div class="project-image">
+							<img src={korSuksisImg.src} alt="KOR SUKSIS Lampiran A Generator screenshot" class="project-screenshot project-screenshot-mobile" />
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="project-badge">Desktop & Mobile App</span>
+								<span class="project-status done">✓ Completed</span>
+							</div>
+							<h3>KOR SUKSIS — Lampiran A Generator</h3>
+							<p class="project-date">2025</p>
+							<p class="project-desc">A cross-platform app (Windows, Mac & Android) for KOR SUKSIS UMS that automatically generates Borang JPJKK/KSS/004/22 (Lampiran A) and Daftar Kedatangan. Data stays 100% local — no internet, no server, no cloud.</p>
+							<div class="project-highlights">
+								<span class="highlight-item">📋 Auto-generates Lampiran A PDF</span>
+								<span class="highlight-item">📱 Works on Windows, Mac & Android</span>
+								<span class="highlight-item">🔒 100% offline — data stays local</span>
+							</div>
+							<div class="project-tags">
+								<span class="tag">HTML</span>
+								<span class="tag">CSS</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">Vite 5</span>
+								<span class="tag">Tauri 2</span>
+								<span class="tag">Capacitor 6</span>
+								<span class="tag">SQLite</span>
+								<span class="tag">jsPDF 2</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/Fadzyll/kor-suksis" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub →</a>
 							</div>
 						</div>
 					</div>
@@ -274,6 +307,10 @@ const topLanguages = [
 							<div class="skill-item" data-skill="Astro">
 								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" />
 								<span>Astro</span>
+							</div>
+							<div class="skill-item" data-skill="Tauri">
+								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tauri/tauri-original.svg" alt="Tauri" />
+								<span>Tauri</span>
 							</div>
 							<div class="skill-item" data-skill="Docker">
 								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
@@ -847,6 +884,7 @@ const topLanguages = [
 		'Yii2 MVC': 'A high-performance PHP framework following the MVC pattern. Used for building robust web applications quickly with built-in tools.',
 		'Jetpack Compose': 'Android\'s modern UI toolkit for building native interfaces using declarative Kotlin code — less boilerplate, more intuitive.',
 		'Astro': 'A modern static site framework focused on performance. Ships zero JavaScript by default and supports multiple UI frameworks.',
+		'Tauri': 'A framework for building lightweight, secure desktop apps using web technologies (HTML, CSS, JS) with a Rust backend. Produces tiny native .exe and .dmg binaries.',
 		'Docker': 'A platform for containerizing applications so they run consistently across any environment — development, testing, or production.',
 		'Git': 'A distributed version control system for tracking code changes, collaborating with teams, and managing project history.',
 		'GitHub': 'A cloud-based platform for hosting Git repositories. The standard for open-source collaboration and code sharing.',

@@ -192,6 +192,10 @@ import profilePhoto from '../assets/GMBR.jpg';
 								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Jetpack Compose" />
 								<span>Jetpack Compose</span>
 							</div>
+							<div class="stack-item" data-skill="Tauri">
+								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tauri/tauri-original.svg" alt="Tauri" />
+								<span>Tauri</span>
+							</div>
 							<div class="stack-item" data-skill="Docker">
 								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
 								<span>Docker</span>
@@ -229,27 +233,27 @@ import profilePhoto from '../assets/GMBR.jpg';
 					<div class="stack-group reveal reveal-delay-3">
 						<p class="stack-label">Concepts</p>
 						<div class="stack-icons">
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="OOP">
 								<span class="concept-icon">⚙️</span>
 								<span>OOP</span>
 							</div>
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="SDLC">
 								<span class="concept-icon">🔄</span>
 								<span>SDLC</span>
 							</div>
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="System Design">
 								<span class="concept-icon">🏗️</span>
 								<span>System Design</span>
 							</div>
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="DSA">
 								<span class="concept-icon">🧮</span>
 								<span>DSA</span>
 							</div>
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="MVVM">
 								<span class="concept-icon">🧱</span>
 								<span>MVVM</span>
 							</div>
-							<div class="stack-item concept">
+							<div class="stack-item concept" data-skill="Database Design">
 								<span class="concept-icon">🗄️</span>
 								<span>Database Design</span>
 							</div>
@@ -292,6 +296,35 @@ import profilePhoto from '../assets/GMBR.jpg';
 							<span class="tag">Jetpack Compose</span>
 							<span class="tag">Room DB</span>
 							<span class="tag">MVVM</span>
+						</div>
+					</div>
+					<div class="project-card reveal reveal-delay-4">
+						<div class="project-header">
+							<span class="project-icon">🖥️</span>
+							<span class="project-status">Completed · 2025</span>
+						</div>
+						<h3>KOR SUKSIS — Lampiran A Generator</h3>
+						<p>Cross-platform desktop & Android app that auto-generates Lampiran A forms and Daftar Kedatangan for KOR SUKSIS UMS. 100% offline.</p>
+						<div class="project-tags">
+							<span class="tag">Tauri 2</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">Capacitor</span>
+							<span class="tag">SQLite</span>
+							<span class="tag">jsPDF</span>
+						</div>
+					</div>
+					<div class="project-card reveal reveal-delay-5">
+						<div class="project-header">
+							<span class="project-icon">🎓</span>
+							<span class="project-status">Completed · 2025</span>
+						</div>
+						<h3>CGPA Calculator</h3>
+						<p>A web app for Malaysian university students to calculate semester GPA, cumulative CGPA, and plan target grades — based on UMS grading policy.</p>
+						<div class="project-tags">
+							<span class="tag">Astro</span>
+							<span class="tag">TypeScript</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">CSS</span>
 						</div>
 					</div>
 				</div>
@@ -1006,6 +1039,7 @@ import profilePhoto from '../assets/GMBR.jpg';
 		'Yii2 MVC': 'A high-performance PHP framework following the MVC pattern. Used for building robust web applications quickly with built-in tools.',
 		'Jetpack Compose': 'Android\'s modern UI toolkit for building native interfaces using declarative Kotlin code — less boilerplate, more intuitive.',
 		'Astro': 'A modern static site framework focused on performance. Ships zero JavaScript by default and supports multiple UI frameworks.',
+		'Tauri': 'A framework for building lightweight, secure desktop apps using web technologies (HTML/CSS/JS) with a Rust backend. Produces tiny native .exe and .dmg binaries — much lighter than Electron.',
 		'Docker': 'A platform for containerizing applications so they run consistently across any environment — development, testing, or production.',
 		'Git': 'A distributed version control system for tracking code changes, collaborating with teams, and managing project history.',
 		'GitHub': 'A cloud-based platform for hosting Git repositories. The standard for open-source collaboration and code sharing.',
@@ -1013,6 +1047,12 @@ import profilePhoto from '../assets/GMBR.jpg';
 		'PostgreSQL': 'A powerful, open-source relational database known for reliability, advanced features, and standards compliance.',
 		'Figma': 'A cloud-based design tool for UI/UX. Used for wireframing, prototyping, and collaborating on interface designs.',
 		'Android Studio': 'The official IDE for Android development. Provides tools for building, testing, and debugging Android apps.',
+		'OOP': 'Object-Oriented Programming — a paradigm that organizes code into objects with properties and methods. Core principles: Encapsulation, Inheritance, Polymorphism, and Abstraction.',
+		'SDLC': 'Software Development Life Cycle — a structured process for planning, creating, testing, and deploying software. Covers phases from requirements gathering to maintenance.',
+		'System Design': 'The process of defining the architecture, components, and data flow of a system. Includes designing APIs, databases, and scalable infrastructure.',
+		'DSA': 'Data Structures & Algorithms — the foundation of efficient programming. Covers arrays, linked lists, trees, graphs, sorting, and searching algorithms.',
+		'MVVM': 'Model-View-ViewModel — an architectural pattern that separates UI from business logic. Used in Android (Jetpack), Vue, and other frameworks for cleaner, testable code.',
+		'Database Design': 'The process of structuring a database for efficiency and integrity. Covers normalization, ERD, relational schemas, indexing, and query optimization.',
 	};
 
 	const modal = document.getElementById('skillModal');
@@ -1025,12 +1065,23 @@ import profilePhoto from '../assets/GMBR.jpg';
 		el.addEventListener('click', () => {
 			const name = (el as HTMLElement).dataset.skill!;
 			const img = el.querySelector('img');
+			const emojiSpan = el.querySelector('.concept-icon');
 			if (modalTitle) modalTitle.textContent = name;
-			if (modalDesc) modalDesc.textContent = skills[name] ?? 'A tool I use in my development workflow.';
-			if (modalIcon && img) {
-				modalIcon.src = img.src;
-				modalIcon.alt = name;
-				modalIcon.style.filter = img.style.filter ?? '';
+			if (modalDesc) modalDesc.textContent = skills[name] ?? 'A concept I apply in my development workflow.';
+			if (modalIcon) {
+				if (img) {
+					modalIcon.src = img.src;
+					modalIcon.alt = name;
+					modalIcon.style.filter = img.style.filter ?? '';
+					modalIcon.style.display = 'block';
+					modalIcon.style.fontSize = '';
+				} else if (emojiSpan) {
+					modalIcon.src = '';
+					modalIcon.alt = '';
+					modalIcon.style.display = 'none';
+					// Show emoji in title area instead
+					if (modalTitle) modalTitle.textContent = `${emojiSpan.textContent} ${name}`;
+				}
 			}
 			modal?.classList.add('open');
 		});
