@@ -2,6 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import logoKorSuksis from '../assets/logo kor suksis.jpg';
+import logoKRM from '../assets/logo KRM.jpg';
+import logoPMFKI from '../assets/logo PMFKI.png';
+import logoSAI from '../assets/logo SAI.png';
+import logoKFBX from '../assets/logo KFBX.jpg';
+import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 ---
 
 <!doctype html>
@@ -127,21 +133,7 @@ import Footer from '../components/Footer.astro';
 								</div>
 								<span class="timeline-date">2016 – 2020</span>
 							</div>
-							<p class="timeline-desc">Science Stream. PT3: 7A, 2B, 1C. SPM: 5A, 2B. Active in co-curricular activities, leadership, and community service.</p>
-						</div>
-					</div>
-
-					<div class="timeline-item reveal reveal-delay-4">
-						<div class="timeline-dot accent-dot"></div>
-						<div class="timeline-content">
-							<div class="timeline-header">
-								<div>
-									<h3>UPSR (Primary School)</h3>
-									<p class="timeline-org">SK Tanjung Aru 1 → SK Laya-Laya · Tuaran, Sabah</p>
-								</div>
-								<span class="timeline-date">2010 – 2015</span>
-							</div>
-							<p class="timeline-desc">Started at SK Tanjung Aru 1 in Darjah 1, then transferred to SK Laya-Laya mid-Darjah 2. Completed primary school and sat for UPSR: 3A, 1B, 1C.</p>
+							<p class="timeline-desc">Science Stream. SPM: 5A, 2B. Active in co-curricular activities, leadership, and community service.</p>
 						</div>
 					</div>
 
@@ -155,17 +147,29 @@ import Footer from '../components/Footer.astro';
 				<div class="cards-grid">
 
 					<div class="activity-card reveal reveal-delay-1">
-						<div class="activity-icon">🪖</div>
+						<div class="activity-image">
+							<img src={logoKorSuksis.src} alt="KOR SUKSIS UMS logo" />
+						</div>
 						<div class="activity-content">
-							<h3>Platoon Leader, Skuad 18</h3>
+							<div class="activity-meta">
+								<span class="activity-badge">Skuad Leader</span>
+								<span class="activity-year">2022 – 2025</span>
+							</div>
+							<h3>Skuad 18</h3>
 							<p class="activity-sub">KOR SUKSIS UMS</p>
 							<p>Led a platoon in UMS's Police Volunteer Corps (SUKSIS). Awarded <strong>Best Trainer Overall from UMS</strong> at the 21st KOR SUKSIS Inspector Appointment & Graduation Parade Ceremony 2025 (at UTeM).</p>
 						</div>
 					</div>
 
 					<div class="activity-card reveal reveal-delay-2">
-						<div class="activity-icon">🕌</div>
+						<div class="activity-image">
+							<img src={logoKRM.src} alt="Kelab Rakan Masjid UMS logo" />
+						</div>
 						<div class="activity-content">
+							<div class="activity-meta">
+								<span class="activity-badge">Exco Member</span>
+								<span class="activity-year">2022</span>
+							</div>
 							<h3>Youth Development Exco</h3>
 							<p class="activity-sub">Kelab Rakan Masjid UMS (KRM)</p>
 							<p>Served on the executive committee responsible for youth development programs and community engagement initiatives under the UMS mosque club.</p>
@@ -173,8 +177,14 @@ import Footer from '../components/Footer.astro';
 					</div>
 
 					<div class="activity-card reveal reveal-delay-3">
-						<div class="activity-icon">🤝</div>
+						<div class="activity-image">
+							<img src={logoPMFKI.src} alt="PMFKI logo" />
+						</div>
 						<div class="activity-content">
+							<div class="activity-meta">
+								<span class="activity-badge">Exco Member</span>
+								<span class="activity-year">2022</span>
+							</div>
 							<h3>External Relations Exco Secretariat</h3>
 							<p class="activity-sub">PMFKI · UMS</p>
 							<p>Handled external relations and secretariat duties for the Faculty of Computing & Informatics Student Association at UMS.</p>
@@ -182,29 +192,47 @@ import Footer from '../components/Footer.astro';
 					</div>
 
 					<div class="activity-card reveal reveal-delay-4">
-						<div class="activity-icon">📋</div>
+						<div class="activity-image">
+							<img src={logoSAI.src} alt="Sahabat Al-Irfaan logo" />
+						</div>
 						<div class="activity-content">
-							<h3>Team Leader — Sponsorship Unit</h3>
-							<p class="activity-sub">FKI Pet Therapy Program</p>
-							<p>Led the sponsorship unit for the FKI Pet Therapy Program, coordinating outreach and securing support for the event.</p>
+							<div class="activity-meta">
+								<span class="activity-badge">President</span>
+								<span class="activity-year">2021</span>
+							</div>
+							<h3>Sahabat Al-Irfaan</h3>
+							<p class="activity-sub">Labuan Matriculation College</p>
+							<p>Served as president of the Sahabat Al-Irfaan committee during matriculation year, leading Islamic-oriented community activities.</p>
 						</div>
 					</div>
 
 					<div class="activity-card reveal reveal-delay-5">
-						<div class="activity-icon">🏛️</div>
+						<div class="activity-image">
+							<img src={logoKFBX.src} alt="Konvensyen Fiqh Borneo X logo" />
+						</div>
 						<div class="activity-content">
-							<h3>President, Sahabat Al-Irfaan</h3>
-							<p class="activity-sub">Labuan Matriculation College</p>
-							<p>Served as president of the Sahabat Al-Irfaan committee during foundation year, leading Islamic-oriented community activities.</p>
+							<div class="activity-meta">
+								<span class="activity-badge">Ketua AJK</span>
+								<span class="activity-year">2024</span>
+							</div>
+							<h3>Konvensyen Fiqh Borneo X</h3>
+							<p class="activity-sub">National Level · UMS</p>
+							<p>Led the registration unit for the 10th Borneo Fiqh Convention, successfully achieving <strong>400 participants</strong> from UMS, other institutions, and the public.</p>
 						</div>
 					</div>
 
 					<div class="activity-card reveal reveal-delay-1">
-						<div class="activity-icon">📅</div>
+						<div class="activity-image">
+							<img src={gambarBaktiSuksis.src} alt="BaktiSuksis 2024" />
+						</div>
 						<div class="activity-content">
-							<h3>Event Committee</h3>
-							<p class="activity-sub">Into The Industry 3.0 · BaktiSuksis 2024</p>
-							<p>Served on the organizing committees for Into The Industry 3.0 and BaktiSuksis 2024 — contributing to planning, coordination, and execution.</p>
+							<div class="activity-meta">
+								<span class="activity-badge">Committee</span>
+								<span class="activity-year">2024</span>
+							</div>
+							<h3>BaktiSuksis Committee</h3>
+							<p class="activity-sub">BaktiSuksis 2024</p>
+							<p>Served on the organizing committees for BaktiSuksis 2024 — contributing to planning, coordination, and execution.</p>
 						</div>
 					</div>
 
@@ -350,24 +378,6 @@ import Footer from '../components/Footer.astro';
 					</div>
 
 					<div class="cert-item reveal reveal-delay-2">
-						<div class="cert-icon">🛵</div>
-						<div class="cert-content">
-							<h3>Food Delivery Rider</h3>
-							<p class="cert-sub">Self-employed · Kota Kinabalu</p>
-						</div>
-						<span class="cert-badge">Part-Time</span>
-					</div>
-
-					<div class="cert-item reveal reveal-delay-3">
-						<div class="cert-icon">👕</div>
-						<div class="cert-content">
-							<h3>Jersey Reseller</h3>
-							<p class="cert-sub">Self-employed · Online</p>
-						</div>
-						<span class="cert-badge">Side Business</span>
-					</div>
-
-					<div class="cert-item reveal reveal-delay-4">
 						<div class="cert-icon">💼</div>
 						<div class="cert-content">
 							<h3>Freelance — Mobile App Tester</h3>
@@ -644,8 +654,11 @@ import Footer from '../components/Footer.astro';
 		background: var(--bg-card);
 		border: 1px solid var(--border);
 		border-radius: 14px;
-		padding: 1.5em;
+		overflow: hidden;
 		transition: border-color 0.2s, transform 0.2s;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.activity-card:hover {
@@ -653,9 +666,53 @@ import Footer from '../components/Footer.astro';
 		transform: translateY(-2px);
 	}
 
-	.activity-icon {
-		font-size: 1.8em;
-		margin-bottom: 0.75em;
+	.activity-image {
+		width: 100%;
+		height: 160px;
+		overflow: hidden;
+		background: var(--bg-secondary);
+		flex-shrink: 0;
+	}
+
+	.activity-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+
+	.activity-content {
+		padding: 1.25em 1.5em 1.5em;
+		flex: 1;
+	}
+
+	.activity-meta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	.activity-badge {
+		font-family: var(--font-mono);
+		font-size: 0.7em;
+		color: var(--accent);
+		background: var(--accent-glow);
+		border: 1px solid var(--border);
+		padding: 0.15em 0.6em;
+		border-radius: 100px;
+	}
+
+	.activity-year {
+		font-family: var(--font-mono);
+		font-size: 0.7em;
+		color: var(--white-muted);
+		background: var(--bg-secondary);
+		border: 1px solid var(--border);
+		padding: 0.15em 0.6em;
+		border-radius: 100px;
 	}
 
 	.activity-content h3 {
