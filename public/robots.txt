@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Fadzyll.github.io/sitemap-index.xml

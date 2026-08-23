@@ -1,12 +1,11 @@
 ---
-import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
 	<nav>
 		<a href="/" class="logo">
-			<span class="logo-bracket">&lt;</span>{SITE_TITLE}<span class="logo-bracket">/&gt;</span>
+			<span class="logo-bracket">&lt;</span>Fadzyll<span class="logo-bracket">/&gt;</span>
 		</a>
 		<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
 			<span></span><span></span><span></span>
@@ -46,15 +45,19 @@ import HeaderLink from './HeaderLink.astro';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 1100px;
+		width: 900px;
+		max-width: 100%;
 		margin: 0 auto;
 		height: 64px;
 		gap: 1em;
 	}
 
 	.logo {
+		display: flex;
+		align-items: center;
 		font-size: 1.1em;
 		font-weight: 700;
+		line-height: 1;
 		color: var(--white);
 		text-decoration: none;
 		white-space: nowrap;
@@ -78,6 +81,7 @@ import HeaderLink from './HeaderLink.astro';
 		text-decoration: none;
 		font-size: 0.9em;
 		font-weight: 500;
+		line-height: 1;
 		border-radius: 6px;
 		border-bottom: 2px solid transparent;
 		transition: color 0.2s ease, background 0.2s ease;

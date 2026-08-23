@@ -5,12 +5,28 @@ import { Font } from 'astro:assets';
 interface Props {
 	title: string;
 	description: string;
+	keywords?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og-image.jpg', Astro.site);
 
-const { title, description } = Astro.props;
+const {
+	title,
+	description,
+	keywords = 'Fadzil Bin Ismail, Fadzyll, software engineer, Sabah, web developer, mobile developer, portfolio',
+} = Astro.props;
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Fadzil Bin Ismail',
+	alternateName: 'Fadzyll',
+	url: 'https://Fadzyll.github.io',
+	image: new URL('/og-image.jpg', Astro.site).toString(),
+	jobTitle: 'Software Engineer',
+	sameAs: ['https://github.com/Fadzyll', 'https://www.linkedin.com/in/fadzilismail/'],
+};
 ---
 
 <!-- Prevent theme flash -->
@@ -57,6 +73,12 @@ const { title, description } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Fadzil Bin Ismail" />
+<meta name="robots" content="index, follow" />
+
+<!-- Google Search Console verification -->
+<meta name="google-site-verification" content="gAPAcsW4jGOGcVf_roYHAtYkNUASzqbsF-H6X70fM4A" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -71,6 +93,9 @@ const { title, description } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImage} />
+
+<!-- Structured Data -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
 
 <!-- Botpress Chatbot (disabled — still in development) -->
 <!-- <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" is:inline></script> -->
