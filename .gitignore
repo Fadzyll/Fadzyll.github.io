@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# private resume source (contains phone & address) — never commit
+resume.pdf
