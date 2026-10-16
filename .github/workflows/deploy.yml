@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  schedule:
+    # Weekly rebuild so the GitHub stats on /projects stay current (Mondays 00:17 UTC = 08:17 MYT)
+    - cron: '17 0 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -25,6 +28,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          # Used at build time to fetch GitHub stats (public data only)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

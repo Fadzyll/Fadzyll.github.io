@@ -7,19 +7,12 @@ import kindergartenImg from '../assets/photo_2026-05-24_20-59-13.jpg';
 import cgpaImg from '../assets/cgpa-calculator.png';
 import korSuksisImg from '../assets/kor-suksis.jpg';
 
-// GitHub stats — update these manually every few months
-const githubStats = {
-	public_repos: 9,
-	commits_this_year: 224,
-	followers: 0,
-	active_since: 2024,
-};
-const topLanguages = [
-	{ name: 'HTML', percent: 36, color: '#e34c26' },
-	{ name: 'Astro', percent: 33, color: '#ff5a03' },
-	{ name: 'JavaScript', percent: 18, color: '#f1e05a' },
-	{ name: 'CSS', percent: 13, color: '#563d7c' },
-];
+import { getGithubStats } from '../lib/githubStats';
+
+// Fetched from GitHub at build time (see src/lib/githubStats.ts); "+" marks fallback values.
+const githubStats = await getGithubStats();
+const topLanguages = githubStats.topLanguages;
+const plus = githubStats.live ? '' : '+';
 ---
 
 <!doctype html>
@@ -276,19 +269,19 @@ const topLanguages = [
 				<h2 class="reveal reveal-delay-1">GitHub Activity</h2>
 				<div class="gh-stats-grid reveal reveal-delay-2">
 					<div class="gh-stat-card">
-						<span class="gh-stat-value">{githubStats.public_repos}</span>
+						<span class="gh-stat-value">{githubStats.publicRepos}</span>
 						<span class="gh-stat-label">Public Repos</span>
 					</div>
 					<div class="gh-stat-card">
-						<span class="gh-stat-value">{githubStats.commits_this_year}+</span>
+						<span class="gh-stat-value">{githubStats.commitsThisYear}{plus}</span>
 						<span class="gh-stat-label">Commits This Year</span>
 					</div>
 					<div class="gh-stat-card">
-						<span class="gh-stat-value">304+</span>
-						<span class="gh-stat-label">Total Contributions</span>
+						<span class="gh-stat-value">{githubStats.contributionsLastYear}{plus}</span>
+						<span class="gh-stat-label">Contributions (Last Year)</span>
 					</div>
 					<div class="gh-stat-card">
-						<span class="gh-stat-value">{githubStats.active_since}</span>
+						<span class="gh-stat-value">{githubStats.activeSince}</span>
 						<span class="gh-stat-label">Active Since</span>
 					</div>
 				</div>
