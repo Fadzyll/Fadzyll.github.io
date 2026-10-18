@@ -319,6 +319,7 @@ const plus = githubStats.live ? '' : '+';
 			<section class="section">
 				<p class="section-label reveal">// skills</p>
 				<h2 class="reveal reveal-delay-1">Technical Skills</h2>
+				<p class="skill-hint reveal reveal-delay-2"><span aria-hidden="true">👆</span> Click or tap any icon to see what it is</p>
 				<div class="skills-grid">
 
 					<div class="skill-group reveal reveal-delay-1">
@@ -612,6 +613,13 @@ const plus = githubStats.live ? '' : '+';
 
 	.project-card.no-image .project-info {
 		padding: 1.75em;
+	}
+
+	.skill-hint {
+		font-family: var(--font-mono);
+		font-size: 0.8em;
+		color: var(--accent);
+		margin: -0.75em 0 1.5em;
 	}
 
 	.section-note {
