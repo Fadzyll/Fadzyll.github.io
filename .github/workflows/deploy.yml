@@ -4,8 +4,8 @@ on:
   push:
     branches: [ main ]
   schedule:
-    # Weekly rebuild so the GitHub stats on /projects stay current (Mondays 00:17 UTC = 08:17 MYT)
-    - cron: '17 0 * * 1'
+    # Daily rebuild so the GitHub stats on /projects stay current (00:17 UTC = 08:17 MYT)
+    - cron: '17 0 * * *'
   workflow_dispatch:
 
 permissions:
