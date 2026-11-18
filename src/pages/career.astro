@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -162,7 +163,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 								</div>
 								<span class="timeline-date">2021 – 2022</span>
 							</div>
-							<p class="timeline-desc">Science Major (Computer Science). CGPA 3.46, MUET Band 4.5. Completed fast track to university within a year, building the groundwork for a degree in computer science.</p>
+							<p class="timeline-desc">Science Major (Computer Science). CGPA 3.46, MUET Band 4.0. Completed fast track to university within a year, building the groundwork for a degree in computer science.</p>
 						</div>
 					</div>
 
@@ -194,7 +195,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-1">
 						<div class="activity-image">
-							<img src={logoKorSuksis.src} alt="KOR SUKSIS UMS logo" />
+							<Image src={logoKorSuksis} width={720} alt="KOR SUKSIS UMS logo" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -209,7 +210,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-2">
 						<div class="activity-image">
-							<img src={logoKRM.src} alt="Kelab Rakan Masjid UMS logo" />
+							<Image src={logoKRM} width={720} alt="Kelab Rakan Masjid UMS logo" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -224,7 +225,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-3">
 						<div class="activity-image">
-							<img src={logoPMFKI.src} alt="PMFKI logo" />
+							<Image src={logoPMFKI} width={720} alt="PMFKI logo" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -239,7 +240,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-4">
 						<div class="activity-image">
-							<img src={logoSAI.src} alt="Sahabat Al-Irfaan logo" />
+							<Image src={logoSAI} width={720} alt="Sahabat Al-Irfaan logo" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -254,7 +255,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-5">
 						<div class="activity-image">
-							<img src={logoKFBX.src} alt="Konvensyen Fiqh Borneo X logo" />
+							<Image src={logoKFBX} width={720} alt="Konvensyen Fiqh Borneo X logo" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -269,7 +270,7 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 
 					<div class="activity-card reveal reveal-delay-1">
 						<div class="activity-image">
-							<img src={gambarBaktiSuksis.src} alt="BaktiSuksis 2024" />
+							<Image src={gambarBaktiSuksis} width={720} alt="BaktiSuksis 2024" />
 						</div>
 						<div class="activity-content">
 							<div class="activity-meta">
@@ -993,13 +994,13 @@ import gambarBaktiSuksis from '../assets/gambar baktisuksis.jpeg';
 	}
 
 	/* Scroll animations */
-	.reveal {
+	:global(html.js) .reveal {
 		opacity: 0;
 		transform: translateY(28px);
 		transition: opacity 0.6s ease, transform 0.6s ease;
 	}
 
-	.reveal.visible {
+	:global(html.js) .reveal.visible {
 		opacity: 1;
 		transform: translateY(0);
 	}

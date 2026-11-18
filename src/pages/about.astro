@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -30,7 +31,7 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 				</div>
 				<div class="avatar-block reveal-right">
 					<div class="avatar-wrapper">
-						<img src={profilePhoto.src} alt="Fadzil Bin Ismail" class="avatar-photo" />
+						<Image src={profilePhoto} width={360} loading="eager" alt="Fadzil Bin Ismail" class="avatar-photo" />
 						<div class="avatar-ring"></div>
 					</div>
 					<p class="avatar-caption">Tamat Latihan KOR SUKSIS, 2025</p>
@@ -102,7 +103,7 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 						<div class="timeline-content">
 							<span class="timeline-year">2021 – 2022</span>
 							<h3>Labuan Matriculation College</h3>
-							<p>Module III — Science Major (Computer Science). CGPA 3.46, MUET Band 4.5. President of Sahabat Al-Irfaan committee. My first real taste of leadership.</p>
+							<p>Module III — Science Major (Computer Science). CGPA 3.46, MUET Band 4.0. President of Sahabat Al-Irfaan committee. My first real taste of leadership.</p>
 						</div>
 					</div>
 					<div class="timeline-item reveal reveal-delay-5">
@@ -553,24 +554,24 @@ import profilePhoto from '../assets/tauliah_korsuksis.jpg';
 	}
 
 	/* Scroll animations */
-	.reveal {
+	:global(html.js) .reveal {
 		opacity: 0;
 		transform: translateY(28px);
 		transition: opacity 0.6s ease, transform 0.6s ease;
 	}
 
-	.reveal.visible {
+	:global(html.js) .reveal.visible {
 		opacity: 1;
 		transform: translateY(0);
 	}
 
-	.reveal-right {
+	:global(html.js) .reveal-right {
 		opacity: 0;
 		transform: translateX(32px);
 		transition: opacity 0.7s ease, transform 0.7s ease;
 	}
 
-	.reveal-right.visible {
+	:global(html.js) .reveal-right.visible {
 		opacity: 1;
 		transform: translateX(0);
 	}
